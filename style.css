@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --rojo: rgb(145, 33, 33);
+    font-family: Arial;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.barra {
+    height: 100vh;
+    width: 20vw;
+    background-color: var(--rojo);
+}
+
+.container {
+    height: 100vh;
+    width: 80vw;
+    background-color: rgb(252, 251, 246);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    padding: 2%;
+    display: grid;
+    grid-template-areas: ". titulo boton"
+        "busqueda busqueda .";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+
+h1 {
+    text-align: center;
+    width: 50%;
+    height: 12%;
+    grid-area: titulo;
+    margin-left: 80px;
+}
+
+#btnRegistro {
+    border-radius: 90px;
+    width: 50%;
+    height: 50%;
+    background-color: var(--rojo);
+    border: 2px var(--rojo) solid;
+    color: white;
+    grid-area: boton;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 140px;
+}
+
+#btnRegistro:hover {
+    background-color: white;
+    color: var(--rojo);
+}
+
+.busqueda {
+    display: flex;
+    gap: 0.5%;
+    align-items: center;
+    grid-area: busqueda;
+}
+
+.bi {
+    margin-right: 1%;
+}
+
+#busquedaNombre {
+    border-radius: 40px;
+    width: 40%;
+    padding: 1%;
+}
+
+
+#table {
+    border: none;
+    margin-top: 2%;
+    width: 80%;
+    text-align: center;
+    justify-self: center;
+    border-collapse: collapse;
+    color: #000000;
+    text-align: left;
+
+}
+
+tr:hover {
+    background-color: hsla(0, 63%, 35%,0.7);
+}
+
+.encabezado {
+    background-color: hsla(214, 44%, 35%, 0.553);
+    height: 34px;
+}
+
+td:nth-child(4){
+   color:var(--rojo);
+   font-weight: 600;
+}
+
+td:last-child{
+    text-align: center;
+}
+
+th{
+    padding: 1%;
+}
+td {
+    width: auto;
+    padding: 0.6%;
+}

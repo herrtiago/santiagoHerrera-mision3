@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --rojo: rgb(145, 33, 33);
+    font-family: Arial;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#btnEnviar {
+    border-radius: 90px;
+    width: 60%;
+    height: 50px;
+    background-color: var(--rojo);
+    border: 2px var(--rojo) solid;
+    color: white;
+    grid-area: boton;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#btnEnviar:hover {
+    background-color: white;
+    color: var(--rojo);
+}
+
+.barra {
+    height: 100vh;
+    width: 20vw;
+    background-color: var(--rojo);
+}
+
+header {
+    height: 20vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+
+header h1 {
+    height: 20vh;
+    width: 30%;
+    text-align: center;
+    justify-self: center;
+}
+
+#atras {
+    justify-self: flex-start;
+    width: 30%;
+    display: flex;
+}
+
+i {
+    size: 50px;
+    color: var(--rojo);
+    cursor: pointer;
+    margin: 3%;
+    justify-self: flex-start;
+    height: 10%;
+}
+
+i:hover {
+
+    color: black;
+}
+
+.container {
+    height: 100vh;
+    width: 80vw;
+    background-color: rgb(252, 251, 246);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.inputs {
+    width: 100%;
+    height: 80%;
+    padding: 10%;
+    display: grid;
+    grid-template-areas: "nombres . apellidos"
+        "area usuario edad"
+        "dir dir dir"
+        "email email email"
+        ". botones .";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1%;
+}
+
+input {
+    height: 50%;
+    border-radius: 10px;
+    border: 2px solid purple;
+    background-color: hsla(212, 81%, 33%, 0.2);
+    padding: 3%;
+}
+
+.nombres,
+.apellidos,
+.area,
+.usuario,
+.direccion,
+.email,
+.edad {
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+}
+
+.nombres {
+    grid-area: nombres;
+}
+
+.apellidos {
+    grid-area: apellidos;
+}
+
+.area {
+    grid-area: area;
+}
+
+.usuario {
+    grid-area: usuario;
+}
+
+.edad {
+    grid-area: edad;
+}
+
+.direccion {
+    grid-area: dir;
+}
+
+.email {
+    grid-area: email;
+}
+
+.botones {
+    grid-area: botones;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
